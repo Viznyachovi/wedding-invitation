@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="slider">
+    <div class="slides">
+
+        <!-- ===== ЭКРАН 1 ===== -->
+        <section class="slide">
+            <div class="wrapper">
+
+                <div class="rings">
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <h1 class="title">ПРИГЛАШЕНИЕ</h1>
+                <div class="date">20 мая 2026 года, в 14:00</div>
+              
+
+                <div class="names">
+                    Софья<br>и Максим
+                </div>
+
+                <div class="hearts">
+                    <span>❤</span><span>❤</span><span>❤</span>
+                    <span>❤</span><span>❤</span>
+                </div>
+
+                <div class="timer">
+                    <div class="time-block">
+                        <div id="weeks" class="number">00</div>
+                        <div class="label">недель</div>
+                    </div>
+                    <div class="time-block">
+                        <div id="days" class="number">00</div>
+                        <div class="label">дней</div>
+                    </div>
+                    <div class="time-block">
+                        <div id="hours" class="number">00</div>
+                        <div class="label">часов</div>
+                    </div>
+                    <div class="time-block">
+                        <div id="minutes" class="number">00</div>
+                        <div class="label">минут</div>
+                    </div>
+                    <div class="time-block">
+                        <div id="seconds" class="number">00</div>
+                        <div class="label">секунд</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== ЭКРАН 2 ТАЙМИНГ ===== -->
+        <section class="slide">
+            <div class="wrapper timing-wrapper">
+
+                <h2 class="timing-title">Тайминг</h2>
+
+                <div class="timing">
+
+                    <div class="timing-item">
+                        <div class="time">14:00</div>
+                        <div class="icon">🚗</div>
+                        <div class="text">Сбор гостей</div>
+                    </div>
+
+
+                    <div class="timing-item">
+                        <div class="time">14:20</div>
+                        <div class="icon">💍</div>
+                        <div class="text">Церемония</div>
+                    </div>
+
+                    <div class="timing-item">
+                        <div class="time">15:00</div>
+                        <div class="icon">📷</div>
+                        <div class="text">Фотосессия</div>
+                    </div>
+
+                    <div class="timing-item">
+                        <div class="time">16:00</div>
+                        <div class="icon">🍽</div>
+                        <div class="text">Банкет</div>
+                    </div>
+
+                    <div class="timing-item">
+                        <div class="time">23:00</div>
+                        <div class="icon">🎂</div>
+                        <div class="text">Танцы и завершение</div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- ===== ЭКРАН 3 ОПРОСНИК ===== -->
+        <section class="slide">
+            <div class="wrapper form-wrapper">
+
+                <h2 class="form-title">
+                    Заполните анкету и подтвердите свое присутствие<br>
+                    до <b>15 апреля</b>
+                </h2>
+
+                <form action="https://formsubmit.co/Abramenko.03@list.ru" method="POST">
+
+                    <!-- защита от спама -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="Подтверждение на свадьбу">
+
+                    <!-- Имя -->
+                    <label>Ваше имя и фамилия</label>
+                    <input type="text" name="Имя" placeholder="ФИО" required>
+
+                    <!-- Подтверждение -->
+                    <label>Подтвердите свое присутствие</label>
+
+                    <div class="radio-group">
+                        <label><input type="radio" name="Присутствие" value="Обязательно буду" required> Обязательно буду</label>
+                        <label><input type="radio" name="Присутствие" value="Не смогу присутствовать"> К сожалению, не смогу присутствовать</label>
+                    </div>
+
+                    <!-- Напитки -->
+                    <label>Ваши предпочтения по напиткам</label>
+
+                    <div class="checkbox-group drinks-grid">
+                        <label>
+                            <input type="checkbox" name="drinks" value="red_wine">
+                            Вино красное
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="drinks" value="white_wine">
+                            Вино белое
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="drinks" value="champagne">
+                            Шампанское
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="drinks" value="whiskey">
+                            Виски
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="drinks" value="cognac">
+                            Коньяк
+                        </label>
+                    </div>
+
+                    <button type="submit" class="form-button">Отправить</button>
+
+                </form>
+
+            </div>
+        </section>
+        <!-- ===== ЭКРАН 4 БЛАГОДАРНОСТЬ ===== -->
+        <section class="slide">
+            <div class="wrapper form-wrapper">
+                <h2 class="form-title" style="text-align:center;">
+                    Спасибо за ответ! 💜<br>
+                </h2>
+            </div>
+        </section>
+    </div>
+
+    <button class="arrow left">←</button>
+    <button class="arrow right">→</button>
+</div>
+
+<script>
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", function(e){
+        e.preventDefault(); // отменяем обычную отправку
+
+        // отправка через fetch
+        const data = new FormData(form);
+
+        fetch(form.action, {
+            method: form.method,
+            body: data
+        })
+            .then(response => {
+                // после успешной отправки показываем 4-й слайд
+                current = totalSlides - 1; // последний слайд (Спасибо)
+                updateSlide();
+
+                // можно очистить форму, если нужно
+                form.reset();
+            })
+            .catch(error => {
+                alert("Ошибка при отправке, попробуйте позже.");
+                console.error(error);
+            });
+    });
+    // ===== ТАЙМЕР =====
+    const weddingDate = new Date(2026, 4, 20, 14, 20, 0).getTime();
+
+    function updateTimer() {
+        const now = new Date().getTime();
+        const distance = weddingDate - now;
+        if (distance < 0) return;
+
+        const weeks = Math.floor(distance / (1000*60*60*24*7));
+        const days = Math.floor((distance % (1000*60*60*24*7)) / (1000*60*60*24));
+        const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+        const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+        const seconds = Math.floor((distance % (1000*60)) / 1000);
+
+        weeksEl.innerText = String(weeks).padStart(2,'0');
+        daysEl.innerText = String(days).padStart(2,'0');
+        hoursEl.innerText = String(hours).padStart(2,'0');
+        minutesEl.innerText = String(minutes).padStart(2,'0');
+        secondsEl.innerText = String(seconds).padStart(2,'0');
+    }
+
+    const weeksEl = document.getElementById("weeks");
+    const daysEl = document.getElementById("days");
+    const hoursEl = document.getElementById("hours");
+    const minutesEl = document.getElementById("minutes");
+    const secondsEl = document.getElementById("seconds");
+
+    setInterval(updateTimer,1000);
+    updateTimer();
+
+    // ===== СЛАЙДЕР + СВАЙП ДЛЯ ВСЕГО ЭКРАНА =====
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelector('.slides');
+    const totalSlides = document.querySelectorAll('.slide').length;
+    let current = 0;
+
+    function updateSlide(){
+        slides.style.transform = `translateX(-${current*100}vw)`;
+    }
+
+    document.querySelector('.left').onclick = ()=>{
+        if(current>0) current--;
+        updateSlide();
+    };
+
+    document.querySelector('.right').onclick = ()=>{
+        if(current<totalSlides-1) current++;
+        updateSlide();
+    };
+
+    // свайп
+    let startX = 0;
+
+    slider.addEventListener('touchstart',(e)=>{
+        startX = e.touches[0].clientX;
+    });
+
+    slider.addEventListener('touchend',(e)=>{
+        let endX = e.changedTouches[0].clientX;
+        let diff = startX - endX;
+
+        if(diff > 50 && current < totalSlides-1) current++;
+        if(diff < -50 && current > 0) current--;
+
+        updateSlide();
+    });
+
+</script>
+
+</body>
+</html>
